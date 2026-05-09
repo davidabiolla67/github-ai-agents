@@ -42,13 +42,18 @@ async function ensureOriginRemote(client) {
     });
     return added.text;
   } catch {
-    const setUrl = await callTool(client, 'git_remote', {
+    await callTool(client, 'git_remote', {
       path: WORKDIR,
-      mode: 'set-url',
+      mode: 'remove',
+      name: 'origin',
+    });
+    const reAdded = await callTool(client, 'git_remote', {
+      path: WORKDIR,
+      mode: 'add',
       name: 'origin',
       url: REPO_URL,
     });
-    return setUrl.text;
+    return reAdded.text;
   }
 }
 
