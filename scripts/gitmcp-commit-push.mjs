@@ -29,7 +29,7 @@ async function callTool(client, name, args = {}) {
 
 async function ensureOriginRemote(client) {
   const listed = await callTool(client, 'git_remote', { path: WORKDIR, mode: 'list' });
-  if (listed.text.includes('origin') && listed.text.includes('github-ai-agents')) {
+  if (listed.text.includes('origin') && listed.text.includes(REPO_URL)) {
     return listed.text;
   }
 
