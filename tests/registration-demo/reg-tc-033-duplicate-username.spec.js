@@ -26,3 +26,4 @@ test('REG-TC-033 Edge Case: duplicate username', async ({ page }) => {
 
   await page.screenshot({ path: 'screenshots/REG-TC-033-duplicate-username.png', fullPage: true });
 });
+

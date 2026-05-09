@@ -20,3 +20,4 @@ test('REG-TC-017 Negative Testing: All fields empty', async ({ page }) => {
 
   await page.screenshot({ path: 'screenshots/REG-TC-017-empty-fields.png', fullPage: true });
 });
+

@@ -28,3 +28,4 @@ test('REG-TC-003 Successful Registration', async ({ page }) => {
   await expect(page.locator('#rightPanel')).toContainText('Your account was created successfully');
   await expect(page.locator('#rightPanel')).toContainText(username);
 });
+

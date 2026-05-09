@@ -1,9 +1,15 @@
 import { Client } from '@modelcontextprotocol/sdk/client/index.js';
 import { StdioClientTransport } from '@modelcontextprotocol/sdk/client/stdio.js';
 
-const REPO_URL = 'https://github.com/davidabiolla67/github-ai-agents';
+const REPO_URL = 'https://github.com/davidabiolla67/ai-agent-qa-workflow';
 const WORKDIR = '/Users/pelumioluwaabiola/Documents/agent47';
-const COMMIT_MESSAGE = 'chore(demo): add playwright registration automation artifacts';
+const COMMIT_MESSAGE = `feat(tests): add complete test suite for parabank user-registration
+
+Add user story documentation
+Add comprehensive test plan with all scenarios
+Add test execution report with results
+Add automated test scripts for checkout process
+Include validation, navigation, and edge case tests`;
 
 function toolText(result) {
   const content = result?.content ?? [];
